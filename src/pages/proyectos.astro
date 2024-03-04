@@ -1,10 +1,98 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import CardTopImage from "../components/CardTopImage.astro";
+import Skill from "../components/Skill.astro";
+import LinkRightExternalLinkIcon from "../components/LinkRightExternalLinkIcon.astro";
 ---
 
-<Layout title='Proyectos'>
-    <main class="flex flex-col min-h-screen">
-        <h1 class="text-5xl font-bold mb-12">Proyectos</h1>
-        <div class="badge badge-accent">Próximamente</div>
+<Layout title="Proyectos">
+    <main transition:animate="slide">
+        <h1 class="text-5xl font-bold mb-12 ml-2">Proyectos</h1>
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 min-h-screen justify-items-center xl:justify-items-start mx-2">
+            <div class="transition hover:scale-105 h-full">
+                <a href="https://github.com/romo2613/api-larafy" target="_blank">
+                    <CardTopImage
+                        image="/proyectos/larafy-back.jpeg"
+                        class="h-full"
+                    >
+                        <div
+                            slot="title"
+                            class="flex justify-between items-center w-full"
+                        >
+                            <h2>Larafy | Back-end</h2>
+                            <div class="badge badge-secondary">En desarrollo</div>
+                        </div>
+                        <div slot="text">
+                            <p>
+                                Se trata de una <span class="font-bold">API</span> creada
+                                con <LinkRightExternalLinkIcon
+                                    url={"https://laravel.com/"}
+                                >
+                                    Laravel 10
+                                </LinkRightExternalLinkIcon> cuya finalidad es desplegar
+                                un servidor de gestión de archivos multimedia. Principalmente
+                                está orientada a música y videoclips musicales, en esencia
+                                una especie de Spotify privado con gestión de ficheros
+                                y usuarios. En este proyecto estoy aplicando todos mis
+                                conocimientos de <span class="font-bold"
+                                    >arquitectura hexagonal</span
+                                >
+                                y <span class="font-bold"
+                                    >Domain-Driven-Design (DDD)</span
+                                >.
+                            </p>
+                        </div>
+                        <div slot="content" class="flex flex-wrap">
+                            <Skill class="m-1">Laravel 10</Skill>
+                            <Skill class="m-1">Arquitectura Hexagonal</Skill>
+                            <Skill class="m-1">Domain Driven Design (DDD)</Skill>
+                        </div>
+                    </CardTopImage>
+                </a>
+            </div>
+            <div class="transition hover:scale-105 h-full">
+                <a href="https://github.com/romo2613/front-larafy" target="_blank">
+                    <CardTopImage
+                        image="/proyectos/larafy-front.jpeg"
+                        class="h-full"
+                    >
+                        <div
+                            slot="title"
+                            class="flex justify-between items-center w-full"
+                        >
+                            <h2>Larafy | Front-end</h2>
+                            <div class="badge badge-accent">Próximamente</div>
+                        </div>
+                        <div slot="text">
+                            <p>
+                                Interfaz gráfica construida con <LinkRightExternalLinkIcon
+                                    url={"https://es.react.dev/"}
+                                >
+                                    React JS
+                                </LinkRightExternalLinkIcon> y <LinkRightExternalLinkIcon
+                                    url="https://tailwindcss.com/"
+                                >
+                                    Tailwind CSS
+                                </LinkRightExternalLinkIcon> con la que se consumirá
+                                la <LinkRightExternalLinkIcon
+                                    url="https://github.com/romo2613/api-larafy"
+                                >
+                                    API de Larafy
+                                </LinkRightExternalLinkIcon>. Desde aquí se podrá
+                                iniciar sesión con nuestro usuario, gestionar
+                                usuarios, roles, directorios multimedia, álbumes,
+                                etc... Una vez finalizadas algunas estructuras
+                                básicas de la API comenzaré a desarrollar esto.
+                            </p>
+                        </div>
+                        <div slot="content" class="flex flex-wrap pt-12">
+                            <Skill class="m-1">React JS</Skill>
+                            <Skill class="m-1">Tailwind CSS</Skill>
+                        </div>
+                    </CardTopImage>
+                </a>
+            </div>
+        </div>
     </main>
+   
 </Layout>

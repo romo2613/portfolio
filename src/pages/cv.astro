@@ -1,10 +1,124 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro"
+import Timeline from "../components/Timeline/Timeline.astro"
+import TimelineChildren from "../components/Timeline/TimelineChildren.astro"
+import Skill from "../components/Skill.astro"
 ---
 
-<Layout title='CV'>
-    <main class="flex flex-col min-h-screen">
+<Layout title="CV">
+    <main class="flex flex-col min-h-screen mx-4" transition:animate="slide">
         <h1 class="text-5xl font-bold mb-12">Currículum</h1>
-        <div class="badge badge-accent">Próximamente</div>
+        <div class="mb-6 w-full md:w-3/6 lg:w-3/6 xl:w-2/6">
+            <a
+                class="flex btn btn-primary"
+                href="/cv-javier-romero-web-developer.pdf"
+                target="_blank"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-file-download"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path
+                        d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                    ></path><path d="M12 17v-6"></path><path
+                        d="M9.5 14.5l2.5 2.5l2.5 -2.5"></path>
+                </svg>
+                Descargar currículum
+            </a>
+        </div>
+        <div class="ml-4">
+            <h2 class="text-2xl mb-5 -ml-4 font-bold">Experiencia profesional</h2>
+            <Timeline>
+                <TimelineChildren
+                    title="Ecope Informática"
+                    latest={true}
+                    date="Enero 2023"
+                >
+                    <svg slot="icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-skyscraper" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M5 21v-14l8 -4v18" /><path d="M19 21v-10l-6 -4" /><path d="M9 9l0 .01" /><path d="M9 12l0 .01" /><path d="M9 15l0 .01" /><path d="M9 18l0 .01" /></svg>
+                    <div slot="content">
+                        <ul class="list-disc ml-5">
+                            <li>Desarrollo de páginas web a medida y APIs.</li>
+                            <li>Aplicaciones web basadas en Laravel 10, react.JS, Redux y tailwind CSS.</li>
+                            <li>Despliegue y configuración de VPS Linux con NGINX y MariaDB.</li>
+                            <li>Asistencia técnica en KNAUF Escúzar, configuración de servidores y resolución de incidencias
+                                sin conexión a internet.
+                            </li>
+                        </ul>
+                    </div>
+                </TimelineChildren>
+                <TimelineChildren
+                    title="2HSolutions"
+                    latest={false}
+                    date="Febrero 2021 - Enero 2023"
+                >
+                    <svg slot="icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-skyscraper" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M5 21v-14l8 -4v18" /><path d="M19 21v-10l-6 -4" /><path d="M9 9l0 .01" /><path d="M9 12l0 .01" /><path d="M9 15l0 .01" /><path d="M9 18l0 .01" /></svg>
+                    <div slot="content">
+                        <ul class="list-disc ml-5">
+                            <li>Desarrollo de páginas web a medida.</li>
+                            <li>Aplicaciones web basadas en Laravel, Livewire, Tailwind CSS, Bootstrap, JavaScript Despliegue y
+                                configuración de VPS Linux con NGINX y MariaDB.
+                            </li>
+                            <li>Contacto directo con el cliente final.</li>
+                        </ul>
+                    </div>
+                </TimelineChildren>
+            </Timeline>
+            <h2 class="text-2xl mb-5 -ml-4 font-bold">Formación</h2>
+            <Timeline>
+                <TimelineChildren
+                    title="I.E.S. Al-Ándalus | Almería"
+                    latest={false}
+                    date="2018 - 2020"
+                >
+                    <svg slot="icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></svg>
+                    <p slot="content">Desarrollo de aplicaciones web.</p>
+                </TimelineChildren>
+                <TimelineChildren
+                    title="I.E.S. Francisco Javier de Burgos | Motril (Granada)"
+                    latest={false}
+                    date="2016 - 2018"
+                >
+                    <svg slot="icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></svg>
+                    <p slot="content">Sistemas microinformáticos y redes.</p>
+                </TimelineChildren>
+            </Timeline>
+        </div>
+        <div class="ml-4">
+            <h2 class="text-2xl mb-5 -ml-4 font-bold">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+                <Skill>Autónomo</Skill>
+                <Skill>Trabajo en equipo</Skill>
+                <Skill>Creativo</Skill>
+                <Skill>Responsable</Skill>
+                <Skill>Escucha activa</Skill>
+                <Skill>Analítico</Skill>
+                <Skill>MariaDB</Skill>
+                <Skill>IA</Skill>
+                <Skill>Aprendizaje y mejora</Skill>
+                <Skill>Principios SOLID</Skill>
+                <Skill>Domain-Driven-Design (DDD)</Skill>
+                <Skill>Arquitectura Hexagonal</Skill>
+                <Skill>HTML</Skill>
+                <Skill>CSS</Skill>
+                <Skill>puesta en producción</Skill>
+                <Skill>Front-end</Skill>
+                <Skill>Back-end</Skill>
+                <Skill>React JS</Skill>
+                <Skill>Astro framework</Skill>
+                <Skill>JavaScript</Skill>
+                <Skill>PHP</Skill>
+                <Skill>Laravel</Skill>
+                <Skill>API</Skill>
+                <Skill>Devilbox – Docker Stack</Skill>
+            </div>
+        </div>
     </main>
 </Layout>

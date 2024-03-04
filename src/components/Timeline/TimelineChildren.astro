@@ -1,0 +1,30 @@
+---
+interface Props {
+    title: string
+    date: string
+    latest: boolean
+}
+
+const { title, date, latest = false } = Astro.props
+---
+
+<li class="mb-10 ms-6">
+    <span class="absolute flex items-center justify-center w-6 h-6 bg-info rounded-full -start-3 ring-8 ring-neutral">
+        <slot name="icon" />
+    </span>
+    <h3 class="flex items-center mb-1 text-lg font-semibold">
+        {title} 
+        {latest &&
+          <div class="badge badge-secondary ml-5">Actualidad</div>
+        }
+    </h3>
+    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">
+        {date}
+    </time>
+    <slot name="content" />
+    <!-- <p class="mb-4 text-base font-normal text-gray-500">
+        Get access to over 20+ pages including a dashboard layout,
+        charts, kanban board, calendar, and pre-order E-commerce &
+        Marketing pages.
+    </p> -->
+</li>
