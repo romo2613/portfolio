@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro'
 import Accordion from '../components/Accordion.astro'
 import CardWithImage from '../components/CardWithImage.astro'
 import LinkRightExternalLinkIcon from '../components/LinkRightExternalLinkIcon.astro'
+// import Marquee from '../components/Marquee.astro'
+import Marquee from "../components/react/Marquee";
+
+
 ---
 
 <Layout title="Inicio">
@@ -13,7 +17,7 @@ import LinkRightExternalLinkIcon from '../components/LinkRightExternalLinkIcon.a
 			</div>
 			<div class="space-y-2 font-bold">
 				<h1 class="text-5xl">Soy Javier Romero</h1>
-				<h2 class="text-3xl">Full Stack Developer</h2>
+				<h2 class="text-3xl">Web Developer</h2>
 			</div>
 			<div class="text-lg">
 				<p>Esta es mi web, desarrollada con <span class="font-bold">Astro Framework</span>. Aquí podrás encontrar información
@@ -43,9 +47,19 @@ import LinkRightExternalLinkIcon from '../components/LinkRightExternalLinkIcon.a
 				</a>
 			</div>
 			<div class="pt-5 space-y-2">
-				<div class="flex items-center text-4xl space-x-2 font-bold">
-					<p>Últimos proyectos</p>
+				<div class="flex items-center text-4xl space-x-2 font-bold mb-3">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+					<p>Tech Stack</p>
+				</div>
+				<Marquee client:only>
+					&nbsp;• PHP • Laravel • Laravel Livewire • Java • JavaScript • ReactJS • NextJS • JQuery • TailwindCSS • DaisyUI • ShadcnUI • BootStrap • CSS • HTML • MySQL • Ubuntu Server • AWS • CloudFlare • NGINX • aaPanel • DevilBox - Docker LAMP development stack • Postman • VScode
+				</Marquee>
+
+				<div class="grid grid-cols-4 gap-4">
+				</div>
+				<div class="flex items-center text-3xl sm:text-4xl space-x-2 font-bold">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+					<p>Últimos proyectos</p>
 				</div>
 				<Accordion title="Larafy | Back-end" isChecked={true}>
 					<CardWithImage img='/proyectos/larafy-back.jpeg'>
