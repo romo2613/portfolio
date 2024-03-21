@@ -3,14 +3,14 @@ import Layout from '../layouts/Layout.astro'
 import Accordion from '../components/Accordion.astro'
 import CardWithImage from '../components/CardWithImage.astro'
 import LinkRightExternalLinkIcon from '../components/LinkRightExternalLinkIcon.astro'
-// import Marquee from '../components/Marquee.astro'
-import Marquee from "../components/react/Marquee";
+import Marquee from "../components/react/Marquee"
+
 
 
 ---
 
 <Layout title="Inicio">
-	<main class="mx-4 min-h-screen" transition:animate="slide">
+	<main class="mx-4 min-h-screen">
 		<div class="pb-12 mt-3 space-y-3">
 			<div>
 				<p class="text-xl">Hola!👋</p>
@@ -51,9 +51,11 @@ import Marquee from "../components/react/Marquee";
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
 					<p>Tech Stack</p>
 				</div>
-				<Marquee client:only>
-					&nbsp;• PHP • Laravel • Laravel Livewire • Java • JavaScript • ReactJS • NextJS • JQuery • TailwindCSS • DaisyUI • ShadcnUI • BootStrap • CSS • HTML • MySQL • Ubuntu Server • AWS • CloudFlare • NGINX • aaPanel • DevilBox - Docker LAMP development stack • Postman • VScode
-				</Marquee>
+				<div class="relative z-40">
+					<Marquee client:only>
+					</Marquee>
+				</div>
+	
 
 				<div class="grid grid-cols-4 gap-4">
 				</div>
@@ -107,7 +109,6 @@ import Marquee from "../components/react/Marquee";
 					</CardWithImage>
 				</Accordion>
 			</div>
-		</div>
+		</div>			
 	</main>
-</Layout>
-
+</Layout>	

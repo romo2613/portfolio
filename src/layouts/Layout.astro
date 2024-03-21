@@ -1,6 +1,8 @@
 ---
-import ThemeSelector from '../components/ThemeSelector.astro'
-import { ViewTransitions } from 'astro:transitions';
+import ModalDevWarning from '../components/ModalDevWarning.astro';
+
+// import ThemeSelector from '../components/ThemeSelector.astro'
+// import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -17,10 +19,12 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<ViewTransitions />
+		<!-- <ViewTransitions/> -->
 		<title>{title}</title>
 	</head>
 	<body>
+		<!-- TODO:Esto de las web trasnitions genera errores en el marquee al volver a la pagina inicial-->
+
 		<!-- <div class="drawer lg:drawer-open">
 			<input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
 			<div class="drawer-content flex flex-col md:m-16">
@@ -131,7 +135,11 @@ const { title } = Astro.props;
 						</ul>
 					</div>
 				</div>
+				<ModalDevWarning/>
+
 			</div>
+
 		</div>
+
 	</body>
 </html>
