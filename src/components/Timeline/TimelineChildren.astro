@@ -3,12 +3,13 @@ interface Props {
     title: string
     date: string
     latest: boolean
+    class?: string
 }
 
-const { title, date, latest = false } = Astro.props
+const { class: className, title, date, latest = false } = Astro.props
 ---
 
-<li class="mb-10 ms-6">
+<li class=`mb-10 ms-6 ${className}`>
     <span class="absolute flex items-center justify-center w-6 h-6 bg-info rounded-full -start-3 ring-8 ring-neutral">
         <slot name="icon" />
     </span>
