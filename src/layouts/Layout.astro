@@ -1,5 +1,5 @@
 ---
-import ThemeSelector from '../components/ThemeSelector.astro'
+import ThemeSelector from '../components/ThemeSelector.jsx'
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
@@ -57,12 +57,12 @@ const { title } = Astro.props;
 						⚡️Javier Romero⚡️
 					</div>
 					<div class="navbar-end">
-						<!-- <ThemeSelector></ThemeSelector> -->
+						<ThemeSelector></ThemeSelector>
 					</div>
 				</div>
 				<!-- Page content here -->
 				<div class="absolute top-2 right-0 hidden lg:block">
-					<!-- <ThemeSelector></ThemeSelector> -->
+					<ThemeSelector></ThemeSelector>
 				</div>
 
 				<div class="p-2 md:p-10">
@@ -125,3 +125,4 @@ const { title } = Astro.props;
 		</div>
 	</body>
 </html>
+../components/ThemeSelector.jsx
