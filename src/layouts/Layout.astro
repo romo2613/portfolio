@@ -17,6 +17,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+<<<<<<< HEAD
 		<meta property="og:title" content="Javier Romero | Full Stack Developer">
 		<meta property="og:description" content="Esta es mi página personal donde encontrarás información sobre mí perfil profesional.">
 		<meta property="og:image" content="/foto-perfil.jpg">
@@ -25,12 +26,20 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+=======
+		<!-- <ViewTransitions/> -->
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- TODO:las web trasnitions genera errores en el marquee al volver a la pagina inicial-->
+
+>>>>>>> d5453a66365e140b3ecfbb61ac2a7157cb515d7b
 		<div class="drawer lg:drawer-open">
 			<input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
 
 			<div class="drawer-content flex flex-col lg:m-16">
 				<!-- Navbar -->
-				<div class="w-full navbar bg-base-300 lg:hidden">
+				<div class="w-full navbar bg-base-300 lg:hidden sticky top-0 z-10">
 					<div class="navbar-start flex lg:hidden">
 						<label
 							for="my-drawer-3"
@@ -53,9 +62,9 @@ const { title } = Astro.props;
 							</svg>
 						</label>
 					</div>
-					<div class="navbar-center text-2xl">
+					<a href="/" class="navbar-center text-2xl">
 						⚡️Javier Romero⚡️
-					</div>
+					</a>
 					<div class="navbar-end">
 						<ThemeSelector></ThemeSelector>
 					</div>
@@ -65,7 +74,7 @@ const { title } = Astro.props;
 					<ThemeSelector></ThemeSelector>
 				</div>
 
-				<div class="p-2 md:p-10">
+				<div class="p-2 md:p-10 z-0">
 					<slot />
 					
 				</div>
@@ -92,7 +101,7 @@ const { title } = Astro.props;
 				>
 				</label>
 				<div
-					class="menu p-4 w-80 min-h-full bg-base-200 text-xl space-y-3l"
+					class="menu p-4 pt-14 w-80 min-h-full bg-base-200 text-xl space-y-3 z-10"
 				>
 					<div class="avatar flex justify-center my-5">
 						<div
@@ -121,8 +130,12 @@ const { title } = Astro.props;
 						</ul>
 					</div>
 				</div>
+				<!-- <ModalDevWarning/> -->
+
 			</div>
+
 		</div>
+
 	</body>
 </html>
 ../components/ThemeSelector.jsx
