@@ -4,6 +4,7 @@ import Accordion from '../components/Accordion.astro'
 import CardWithImage from '../components/CardWithImage.astro'
 import LinkRightExternalLinkIcon from '../components/LinkRightExternalLinkIcon.astro'
 import Marquee from "../components/react/Marquee"
+import TechStack from '../components/react/TechStack'
 
 
 
@@ -13,7 +14,12 @@ import Marquee from "../components/react/Marquee"
 	<main class="mx-4 min-h-screen">
 		<div class="pb-12 mt-3 space-y-3">
 			<div class="animate-fade-down">
-				<p class="text-xl">Hola!👋</p>
+				<div class="flex text-xl">
+					<p>
+						Hola!
+					</p>
+					 <p class="animate-wiggle-more animate-thrice">👋</p>
+				</div>
 			</div>
 			<div class="space-y-2 font-bold animate-fade-down animate-delay-[100ms]">
 				<h1 class="text-5xl">Soy Javier Romero</h1>
@@ -55,6 +61,8 @@ import Marquee from "../components/react/Marquee"
 					<Marquee client:only>
 					</Marquee>
 				</div>
+
+				<TechStack/>
 	
 
 				<div class="grid grid-cols-4 gap-4">
