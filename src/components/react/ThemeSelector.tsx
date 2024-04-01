@@ -1,7 +1,7 @@
 
 export default function MyAwesomeThemeComponent() {
 
-    const handleThemeChange = (event) => {
+    const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         localStorage.setItem("theme", event.target.value);
     };
 

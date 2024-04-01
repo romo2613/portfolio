@@ -19,10 +19,8 @@ import {
   IconBrandCloudflare,
   IconServer,
   IconDashboard,
-  IconLamp2,
   IconBrandDocker,
   IconApi,
-  IconApiApp,
   IconBrandVscode,
   IconBrandLivewire,
   IconPackage
