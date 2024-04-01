@@ -8,6 +8,7 @@ import TechStack from '../components/react/TechStack'
 
 
 
+
 ---
 
 <Layout title="Inicio">
@@ -57,13 +58,14 @@ import TechStack from '../components/react/TechStack'
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
 					<p>Tech Stack</p>
 				</div>
-				<div class="relative z-40">
-					<Marquee client:only>
-					</Marquee>
-				</div>
+				<!-- <div class="relative z-40"> -->
+					<Marquee className="mt-20" pauseOnHover="true" speed="30" client:only />
+
+				<!-- </div> -->
 
 				<TechStack/>
-	
+				<Marquee direction="right" pauseOnHover="true" speed="30" client:only />
+
 
 				<div class="grid grid-cols-4 gap-4">
 				</div>

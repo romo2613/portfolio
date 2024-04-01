@@ -161,7 +161,7 @@ export default function TechStack() {
   ]
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
     {techStacks.map((techStack, index) => {
       if (badgeColorsCopy.length === 0) {
         badgeColorsCopy = [...badgeColors];
@@ -172,8 +172,8 @@ export default function TechStack() {
       // Eliminar el color usado de la copia
       badgeColorsCopy.splice(randomIndex, 1);
       return (
-        <div className="flex justify-center btn" key={index}>
-          <div>
+        <div className="flex justify-start btn" key={index}>
+          <div className='pr-3'>
             {techStack.icon}
           </div>
           <div className={`badge ${randomBadgeColor} text-xs`}>{techStack.name}</div>
