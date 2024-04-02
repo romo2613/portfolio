@@ -7,7 +7,7 @@ interface Props {
 const { image, class: className } = Astro.props;
 ---
 
-<div class=`card w-96 bg-base-100 shadow-xl ${className}`>
+<div class=`card w-full bg-base-100 shadow-xl ${className}`>
   <figure><img src={image} alt={image} /></figure>
   <div class="card-body">
     <h2 class="card-title">

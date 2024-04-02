@@ -8,9 +8,16 @@ import LinkRightExternalLinkIcon from "../components/LinkRightExternalLinkIcon.a
 <Layout title="Proyectos">
     <main transition:animate="slide">
         <h1 class="text-5xl font-bold mb-12 ml-2">Proyectos</h1>
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 min-h-screen justify-items-center xl:justify-items-start mx-2">
-            <div class="transition hover:scale-105 h-full animate-fade animate-duration-[2000ms]">
-                <a href="https://github.com/romo2613/api-larafy" target="_blank">
+        <!-- <div
+            class="flex flex-wrap justify-center w-full xl:grid-cols-2 gap-4 min-h-screen"
+        >
+            <div
+                class="w-1/4 transition hover:scale-105 h-full animate-fade animate-duration-[2000ms]"
+            >
+                <a
+                    href="https://github.com/romo2613/api-larafy"
+                    target="_blank"
+                >
                     <CardTopImage
                         image="/proyectos/larafy-back.jpeg"
                         class="h-full"
@@ -20,21 +27,25 @@ import LinkRightExternalLinkIcon from "../components/LinkRightExternalLinkIcon.a
                             class="flex justify-between items-center w-full"
                         >
                             <h2>Larafy | Back-end</h2>
-                            <div class="badge badge-secondary">En desarrollo</div>
+                            <div class="badge badge-secondary">
+                                En desarrollo
+                            </div>
                         </div>
                         <div slot="text">
                             <p>
-                                Se trata de una <span class="font-bold">API</span> creada
-                                con <LinkRightExternalLinkIcon
+                                Se trata de una <span class="font-bold"
+                                    >API</span
+                                > creada con <LinkRightExternalLinkIcon
                                     url={"https://laravel.com/"}
                                 >
                                     Laravel 10
                                 </LinkRightExternalLinkIcon> cuya finalidad es desplegar
                                 un servidor de gestión de archivos multimedia. Principalmente
-                                está orientada a música y videoclips musicales, en esencia
-                                una especie de Spotify privado con gestión de ficheros
-                                y usuarios. En este proyecto estoy aplicando todos mis
-                                conocimientos de <span class="font-bold"
+                                está orientada a música y videoclips musicales, en
+                                esencia una especie de Spotify privado con gestión
+                                de ficheros y usuarios. En este proyecto estoy aplicando
+                                todos mis conocimientos de <span
+                                    class="font-bold"
                                     >arquitectura hexagonal</span
                                 >
                                 y <span class="font-bold"
@@ -45,13 +56,70 @@ import LinkRightExternalLinkIcon from "../components/LinkRightExternalLinkIcon.a
                         <div slot="content" class="flex flex-wrap">
                             <Skill class="m-1">Laravel 10</Skill>
                             <Skill class="m-1">Arquitectura Hexagonal</Skill>
-                            <Skill class="m-1">Domain Driven Design (DDD)</Skill>
+                            <Skill class="m-1">Domain Driven Design (DDD)</Skill
+                            >
                         </div>
                     </CardTopImage>
                 </a>
             </div>
-            <div class="transition hover:scale-105 h-full animate-fade animate-duration-[4000ms]">
-                <a href="https://github.com/romo2613/front-larafy" target="_blank">
+            <div
+                class="w-1/4 transition hover:scale-105 h-full animate-fade animate-duration-[2000ms]"
+            >
+                <a
+                    href="https://github.com/romo2613/api-larafy"
+                    target="_blank"
+                >
+                    <CardTopImage
+                        image="/proyectos/larafy-back.jpeg"
+                        class="h-full"
+                    >
+                        <div
+                            slot="title"
+                            class="flex justify-between items-center w-full"
+                        >
+                            <h2>Larafy | Back-end</h2>
+                            <div class="badge badge-secondary">
+                                En desarrollo
+                            </div>
+                        </div>
+                        <div slot="text">
+                            <p>
+                                Se trata de una <span class="font-bold"
+                                    >API</span
+                                > creada con <LinkRightExternalLinkIcon
+                                    url={"https://laravel.com/"}
+                                >
+                                    Laravel 10
+                                </LinkRightExternalLinkIcon> cuya finalidad es desplegar
+                                un servidor de gestión de archivos multimedia. Principalmente
+                                está orientada a música y videoclips musicales, en
+                                esencia una especie de Spotify privado con gestión
+                                de ficheros y usuarios. En este proyecto estoy aplicando
+                                todos mis conocimientos de <span
+                                    class="font-bold"
+                                    >arquitectura hexagonal</span
+                                >
+                                y <span class="font-bold"
+                                    >Domain-Driven-Design (DDD)</span
+                                >.
+                            </p>
+                        </div>
+                        <div slot="content" class="flex flex-wrap">
+                            <Skill class="m-1">Laravel 10</Skill>
+                            <Skill class="m-1">Arquitectura Hexagonal</Skill>
+                            <Skill class="m-1">Domain Driven Design (DDD)</Skill
+                            >
+                        </div>
+                    </CardTopImage>
+                </a>
+            </div>
+            <div
+                class="w-1/4 transition hover:scale-105 h-full animate-fade animate-duration-[4000ms]"
+            >
+                <a
+                    href="https://github.com/romo2613/front-larafy"
+                    target="_blank"
+                >
                     <CardTopImage
                         image="/proyectos/larafy-front.jpeg"
                         class="h-full"
@@ -78,11 +146,12 @@ import LinkRightExternalLinkIcon from "../components/LinkRightExternalLinkIcon.a
                                     url="https://github.com/romo2613/api-larafy"
                                 >
                                     API de Larafy
-                                </LinkRightExternalLinkIcon>. Desde aquí se podrá
-                                iniciar sesión con nuestro usuario, gestionar
-                                usuarios, roles, directorios multimedia, álbumes,
-                                etc... Una vez finalizadas algunas estructuras
-                                básicas de la API comenzaré a desarrollar esto.
+                                </LinkRightExternalLinkIcon>. Desde aquí se
+                                podrá iniciar sesión con nuestro usuario,
+                                gestionar usuarios, roles, directorios
+                                multimedia, álbumes, etc... Una vez finalizadas
+                                algunas estructuras básicas de la API comenzaré
+                                a desarrollar esto.
                             </p>
                         </div>
                         <div slot="content" class="flex flex-wrap pt-12">
@@ -91,8 +160,120 @@ import LinkRightExternalLinkIcon from "../components/LinkRightExternalLinkIcon.a
                         </div>
                     </CardTopImage>
                 </a>
+            </div> -->
+    </main>
+    <div class="space-y-3">
+        <div class="collapse bg-base-200">
+            <input checked type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+                <div class="flex justify-between w-full">
+                    <h1>Porfolio</h1>
+                    <div class="badge badge-primary">Producción</div>
+                </div>
+            </div>
+            <div class="flex collapse-content">
+                <!-- <div class="rounded-full">
+                        <div class="w-64 h-64 bg-cover bg-left rounded-lg" style="background-image: url('/proyectos/porfolio_pagina_principal.png');">
+                        </div>
+                      </div>
+                    <p>hello</p> -->
+                <div
+                    class="w-full rounded-lg mx-auto h-96 overflow-y-scroll scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 bg-cover bg-left-top mt-4 shadow-lg"
+                    style="background-image:url('/proyectos/porfolio_pagina_principal.png'); background-position: center -80px;"
+                >
+                    <div class="mt-60">
+                        <div class="bg-base-200 p-4 sm:p-8">
+                            <div
+                                class="font-inter font-extrabold text-2xl tracking-tight"
+                            >
+                                Mi porfolio personal
+                            </div>
+                            <p class="mt-4 leading-7 base-content">
+                                Este es mi porfolio personal, justamente el que
+                                estas visualizando. Aquí iré publicando mis
+                                últimos proyectos, así como las tecnologías con
+                                las que trabajo y mi currículum personal. Está
+                                desarrollado con <LinkRightExternalLinkIcon
+                                    url={"https://astro.build/"}
+                                    >Astro Framework</LinkRightExternalLinkIcon
+                                >, <LinkRightExternalLinkIcon
+                                    url="https://react.dev/"
+                                    >React.JS</LinkRightExternalLinkIcon
+                                >, <LinkRightExternalLinkIcon
+                                    url="https://www.typescriptlang.org/"
+                                    >TypeScript</LinkRightExternalLinkIcon
+                                >, <LinkRightExternalLinkIcon
+                                    url="https://tailwindcss.com/"
+                                    >TailwindCSS</LinkRightExternalLinkIcon
+                                > y <LinkRightExternalLinkIcon
+                                    url="https://daisyui.com/"
+                                    >DaisyUI</LinkRightExternalLinkIcon
+                                >
+                                ¡Gracias por visitarlo!
+                            </p>
+
+                            <div class="btn" onclick="my_modal_3.showModal()"
+                                >open modal</button
+                            >
+                            <dialog id="my_modal_3" class="modal w-full">
+                                <div class="modal-box w-full">
+                                    <form method="dialog">
+                                        <button
+                                            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                                            >✕</button
+                                        >
+                                    </form>
+                                    <div class="py-10">
+                                        <div >
+                                            <div class="carousel w-full">
+                                            <div id="slide1" class="carousel-item relative w-full">
+                                              <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full" />
+                                              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide4" class="btn btn-circle">❮</a> 
+                                                <a href="#slide2" class="btn btn-circle">❯</a>
+                                              </div>
+                                            </div> 
+                                            <div id="slide2" class="carousel-item relative w-full">
+                                              <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+                                              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide1" class="btn btn-circle">❮</a> 
+                                                <a href="#slide3" class="btn btn-circle">❯</a>
+                                              </div>
+                                            </div> 
+                                            <div id="slide3" class="carousel-item relative w-full">
+                                              <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full" />
+                                              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide2" class="btn btn-circle">❮</a> 
+                                                <a href="#slide4" class="btn btn-circle">❯</a>
+                                              </div>
+                                            </div> 
+                                            <div id="slide4" class="carousel-item relative w-full">
+                                              <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full" />
+                                              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide3" class="btn btn-circle">❮</a> 
+                                                <a href="#slide1" class="btn btn-circle">❯</a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  
+                                    
+                                </div>
+                            </dialog>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
-   
+        <div class="collapse bg-base-200">
+            <input checked type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+                Click me to show/hide content
+            </div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+    </div>
 </Layout>

@@ -1,0 +1,19 @@
+/* Ancho de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 5px; 
+}
+
+/* Color de fondo del track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Color de fondo del handle */
+::-webkit-scrollbar-thumb {
+    background: gray; 
+}
+
+/* Color de fondo del handle al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
