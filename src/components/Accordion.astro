@@ -2,12 +2,13 @@
 interface Props {
     isChecked: boolean
     title: string
+    class?: string;
 }
 
-const { isChecked=false, title } = Astro.props
+const { isChecked=false, title, class: className } = Astro.props
 ---
 
-<div class="collapse collapse-arrow bg-base-200">
+<div class=`collapse collapse-arrow bg-base-200 my-3 ${className}`>
     <input type="radio" name="my-accordion-2" checked={isChecked && "checked"} />
     <div class="collapse-title text-xl font-medium">
         {title}
