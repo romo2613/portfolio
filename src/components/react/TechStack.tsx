@@ -23,7 +23,11 @@ import {
   IconApi,
   IconBrandVscode,
   IconBrandLivewire,
-  IconPackage
+  IconPackage,
+  IconBrandGit,
+  IconBrandBitbucket,
+  IconBrandTrello,
+  IconBrandMonday
 } from '@tabler/icons-react';
 
 export default function TechStack() {
@@ -132,7 +136,7 @@ export default function TechStack() {
       icon: <IconBrandAws />
     },
     {
-      name: 'CloudFare',
+      name: 'CloudFlare',
       icon: <IconBrandCloudflare />
     },
     {
@@ -154,6 +158,22 @@ export default function TechStack() {
     {
       name: 'VSCode',
       icon: <IconBrandVscode />
+    },
+    {
+      name: 'Git',
+      icon: <IconBrandGit />
+    },
+    {
+      name: 'Bitbucket',
+      icon: <IconBrandBitbucket />
+    },
+    {
+      name: 'Monday',
+      icon: <IconBrandMonday />
+    },
+    {
+      name: 'Trello',
+      icon: <IconBrandTrello />
     }
 
   ]
