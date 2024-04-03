@@ -5,7 +5,7 @@
 
 /* Color de fondo del track */
 ::-webkit-scrollbar-track {
-    background: transparent; 
+    background: black; 
 }
 
 /* Color de fondo del handle */

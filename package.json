@@ -21,11 +21,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4",
+    "react-photo-album": "^2.3.1",
     "tailwindcss": "^3.4.3",
     "tailwindcss-animated": "^1.0.1",
     "theme-change": "^2.5.0",
     "typescript": "^5.4.3",
-    "uvcanvas": "^0.2.1"
+    "uvcanvas": "^0.2.1",
+    "yet-another-react-lightbox": "^3.17.2"
   },
   "devDependencies": {
     "daisyui": "^4.9.0"

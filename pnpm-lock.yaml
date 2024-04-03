@@ -35,6 +35,9 @@ dependencies:
   react-fast-marquee:
     specifier: ^1.6.4
     version: 1.6.4(react-dom@18.2.0)(react@18.2.0)
+  react-photo-album:
+    specifier: ^2.3.1
+    version: 2.3.1(react@18.2.0)
   tailwindcss:
     specifier: ^3.4.3
     version: 3.4.3
@@ -50,6 +53,9 @@ dependencies:
   uvcanvas:
     specifier: ^0.2.1
     version: 0.2.1(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
+  yet-another-react-lightbox:
+    specifier: ^3.17.2
+    version: 3.17.2(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   daisyui:
@@ -3965,6 +3971,15 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
+  /react-photo-album@2.3.1(react@18.2.0):
+    resolution: {integrity: sha512-c7ofDx2DAbQa9AW9wUWOBX9zUKf/QjvdQK+fPNKEiKprks/n8t4c2viyBZ6EWpQLFLU0ad3yVBTgFvxEZ46/Iw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-refresh@0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
@@ -5212,6 +5227,17 @@ packages:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
+    dev: false
+
+  /yet-another-react-lightbox@3.17.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-fM+Br5nR2kt/oBAOHDqVdUmogiHRLCt4iuIJHPS9Q+ME+h+ciME6vEpLt3IPgGU8whib1agEyZBgWJOAKjgadQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /yocto-queue@0.1.0:
