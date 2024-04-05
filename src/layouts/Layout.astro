@@ -1,20 +1,14 @@
 ---
-import ThemeSelector from "../components/react/ThemeSelector.jsx";
-// import { ViewTransitions } from 'astro:transitions';
-import '../styles/global.css'
-
+import { IconBrandGithub, IconBrandLinkedin, IconMail } from "@tabler/icons-react";
+import NavLinks from "../components/react/NavLinks.jsx";
+import ThemeSelector from "../components/react/ThemeSelector.tsx";
+import "../styles/global.css";
 
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
-
-let pathname = Astro.url.pathname;
-
-console.log("ruta actual: ",pathname);
-
-
 ---
 
 <!doctype html>
@@ -95,12 +89,12 @@ console.log("ruta actual: ",pathname);
 						⚡️Javier Romero⚡️
 					</a>
 					<div class="navbar-end justify-center">
-						<ThemeSelector client:only />
+						<ThemeSelector client:only="react" />
 					</div>
 				</div>
 				<!-- Page content here -->
 				<div class="absolute top-2 right-14 hidden lg:block">
-					<ThemeSelector client:only />
+					<ThemeSelector client:only="react" />
 				</div>
 
 				<div class="p-2 md:p-10 z-0">
@@ -124,7 +118,7 @@ console.log("ruta actual: ",pathname);
 				>
 				</label>
 				<div
-					class="menu p-4 pt-20 lg:pt-12 w-80 min-h-full bg-base-200 text-xl space-y-3 z-10"
+					class="menu p-4 pt-20 lg:pt-12 w-80 min-h-full bg-base-200 text-xl space-y-3 z-10 -mb-12"
 				>
 					<div class="avatar flex justify-center my-5">
 						<div
@@ -133,36 +127,28 @@ console.log("ruta actual: ",pathname);
 							<img src="/foto-perfil.jpg" />
 						</div>
 					</div>
-					<div>
+					<div class="flex flex-col">
 						<label
 							for="my-drawer"
 							aria-label="close sidebar"
-							class="drawer-overlay"></label>
-
-						<ul class="menu">
-							<li>
-								<a id="/" href="/" data-astro-prefetch class={`${pathname ==='/' ? 'bg-info text-info-content hover:bg-info': ''}`}>Inicio</a
-								>
-							</li>
-							<li>
-								<a id="cv" href="/cv" data-astro-prefetch class={`${pathname ==='/cv' ? 'bg-info text-info-content hover:bg-info': ''}`}>CV</a>
-							</li>
-							<li>
-								<a
-									id="proyectos"
-									href="/proyectos"
-									data-astro-prefetch
-									class={`${pathname ==='/proyectos' ? 'bg-info text-info-content hover:bg-info': ''}`}
-									>Proyectos</a
-								>
-							</li>
-							<li>
-								<a href="mailto:contacto@romerojavier.dev"
-									>Contacto</a
-								>
-							</li>
-						</ul>
+							class="drawer-overlay"
+						>
+						</label>
+						<div class="flex-grow">
+							<NavLinks client:only="react" />
+						</div>
 					</div>
+				</div>
+				<div class="px-4 flex self-center justify-center space-x-2 sticky bottom-0 bg-gradient-to-t from-base-200 to-transparent h-12">
+					<a href="https://www.linkedin.com/in/javier-r-5baa17165/" target="_blank">
+						<IconBrandLinkedin />
+					</a>
+					<a href="https://github.com/romo2613" target="_blank">
+						<IconBrandGithub />
+					</a>
+					<a href="mailto:contacto@romerojavier.dev">
+						<IconMail />
+					</a>
 				</div>
 			</div>
 		</div>

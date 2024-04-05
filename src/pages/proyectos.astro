@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import LinkRightExternalLinkIcon from "../components/LinkRightExternalLinkIcon.astro";
-import Gallery from "../components/react/Gallery/Gallery";
-import porfolioImages from "../components/react/Gallery/porfolioImages";
+import Gallery from "../components/react/Gallery/Gallery.tsx";
+import portafolioImages from "../components/react/Gallery/portafolioImages.ts";
 ---
 
 <Layout title="Proyectos">
@@ -15,7 +15,7 @@ import porfolioImages from "../components/react/Gallery/porfolioImages";
                     <div class="flex justify-between w-full item">
                         <div class="flex items-center">
                             <div class="badge badge-primary mr-2"></div>
-                             <h1>Porfolio</h1>
+                             <h1>Portafolio</h1>
                         </div>
                         <div class="badge badge-primary">Producción</div>
                     </div>
@@ -23,17 +23,17 @@ import porfolioImages from "../components/react/Gallery/porfolioImages";
                 <div class="flex collapse-content">
                     <div
                         class="w-full rounded-lg mx-auto h-96 overflow-y-scroll scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 bg-cover bg-left-top mt-4 shadow-lg"
-                        style="background-image:url('/proyectos/porfolio/pagina_principal.png'); background-position: center -80px;"
+                        style="background-image:url('/proyectos/portafolio/pagina_principal.png'); background-position: center -80px;"
                     >
                         <div class="mt-60">
                             <div class="bg-base-200 p-4 sm:p-8">
                                 <div
                                     class="font-inter font-extrabold text-2xl tracking-tight"
                                 >
-                                    Mi porfolio personal
+                                    Mi portafolio personal
                                 </div>
                                 <p class="mt-4 leading-7 base-content">
-                                    Este es mi porfolio personal, justamente el que
+                                    Este es mi portafolio personal, justamente el que
                                     estas visualizando. Aquí iré publicando mis
                                     últimos proyectos, así como las tecnologías con
                                     las que trabajo y mi currículum personal. Está
@@ -55,7 +55,7 @@ import porfolioImages from "../components/react/Gallery/porfolioImages";
                                     >
                                     ¡Gracias por visitarlo!
                                 </p>
-                                <Gallery slides={porfolioImages} client:only />
+                                <Gallery slides={portafolioImages} client:only="react" />
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,6 @@ import porfolioImages from "../components/react/Gallery/porfolioImages";
                                     algunas estructuras básicas de la API comenzaré
                                     a desarrollar esto.
                                 </p>
-                                <!-- <Gallery slides={porfolioImages} client:only /> -->
                             </div>
                         </div>
                     </div>
@@ -156,7 +155,6 @@ import porfolioImages from "../components/react/Gallery/porfolioImages";
                                         >Domain-Driven-Design (DDD)</span
                                     >.
                                 </p>
-                                <!-- <Gallery slides={porfolioImages} client:only /> -->
                             </div>
                         </div>
                     </div>
