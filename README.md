@@ -1,6 +1,6 @@
 # Mi Portfolio 🚀
 
-¡Hola! este es mi portfolio personal, aún está en desarrollo. Estoy utilizando las últimas tecnologías para construirlo y mostrar mis proyectos y habilidades.
+¡Hola! este es mi portfolio personal. Estoy utilizando las últimas tecnologías para construirlo y mostrar mis proyectos y habilidades.
 
 ## Tecnologías Utilizadas 💻
 
@@ -8,6 +8,9 @@ Estoy utilizando las siguientes tecnologías en este proyecto:
 
 - Astro Framework
 - TypeScript
+- React.JS
+- TailwindCSS
+- DaisyUI
 
 ## Contacto 📫
 
