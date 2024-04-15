@@ -1,35 +1,58 @@
 import { useEffect, useState } from "react";
 
 export default function NavLinks() {
+  const [pathname, setPathname] = useState("");
+  
+  const drawer = document.getElementById('my-drawer') as HTMLInputElement  
 
-    const [pathname, setPathname] = useState('')
+  const handleClick = () => {
+    if(drawer){
+        drawer.checked = false
+    }
+  }
 
-    useEffect(() => {
-        setPathname(window.location.pathname)
-    }, [pathname])
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, [pathname]);
 
-    return (
-        <ul className="menu">
-            <li>
-                <a id="/" href="/" className={pathname === '/' ? 'bg-info text-info-content hover:bg-info' : ''}>Inicio</a
-                >
-            </li>
-            <li>
-                <a id="cv" href="/cv" className={pathname === '/cv/' ? 'bg-info text-info-content hover:bg-info' : ''}>CV</a>
-            </li>
-            <li>
-                <a
-                    id="proyectos"
-                    href="/proyectos"
-                    className={pathname === '/proyectos/' ? 'bg-info text-info-content hover:bg-info' : ''}
-                >Proyectos</a
-                >
-            </li>
-            <li>
-                <a href="mailto:contacto@romerojavier.dev"
-                >Contacto</a
-                >
-            </li>
-        </ul>
-    )
+  const navItems = [
+    {
+      name: "Inicio",
+      path: "/",
+    },
+    {
+      name: "CV",
+      path: "/cv/",
+    },
+    {
+      name: "Proyectos",
+      path: "/proyectos/",
+    },
+    {
+      name: "Contacto",
+      path: "mailto:contacto@romerojavier.dev",
+    },
+  ];
+
+  return (
+    <>
+      <ul className="menu">
+        {navItems.map((navItem) => (
+          <li key={navItem.name} onClick={ handleClick}>
+            <a
+              id={navItem.path}
+              href={navItem.path}
+              className={
+                pathname === navItem.path
+                  ? "bg-info text-info-content hover:bg-info"
+                  : ""
+              }
+            >
+              {navItem.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }
