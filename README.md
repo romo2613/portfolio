@@ -1,6 +1,6 @@
 # Mi Portfolio 🚀
 
-¡Hola! este es mi portfolio personal. Estoy utilizando las últimas tecnologías para construirlo y mostrar mis proyectos y habilidades.
+¡Hola! este es mi portfolio personal. He utilizando las últimas tecnologías para construirlo y mostrar mis proyectos y habilidades.
 
 ## Tecnologías Utilizadas 💻
 
