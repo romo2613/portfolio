@@ -9,7 +9,7 @@ interface Props {
 const { class: className, title, date, latest = false } = Astro.props
 ---
 
-<li class=`mb-10 ml-6 ${className} space-x-6`>
+<li class=`mb-10 ${className} space-x-6`>
     <span class="absolute flex items-center justify-center w-6 h-6 bg-info rounded-full -start-3 ring-8 ring-neutral">
         <slot name="icon" />
     </span>
@@ -23,9 +23,4 @@ const { class: className, title, date, latest = false } = Astro.props
         {date}
     </time>
     <slot name="content" />
-    <!-- <p class="mb-4 text-base font-normal text-gray-500">
-        Get access to over 20+ pages including a dashboard layout,
-        charts, kanban board, calendar, and pre-order E-commerce &
-        Marketing pages.
-    </p> -->
 </li>
